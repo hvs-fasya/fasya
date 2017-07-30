@@ -1,0 +1,2 @@
+- flash.each do |name, msg|
+  = render partial: 'layouts/flash_message_js', locals: { type: noty_type(name), flash_message: msg }

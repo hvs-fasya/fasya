@@ -1,0 +1,11 @@
+- if user_signed_in?
+  .btn-group.navbar-btn.navbar-right
+    = button_tag(type: 'button', class: 'btn btn-default dropdown-toggle', data: {toggle: 'dropdown'}) do
+      = fa_icon('user')
+      = current_user.nickname
+      %span.caret
+    %ul.dropdown-menu
+      %li= link_to 'Выход', destroy_user_session_path
+- else
+  = link_to 'Вход', new_user_session_path, class: 'btn btn-default navbar-btn navbar-right'
+  = link_to 'Регистрация', new_user_registration_path, class: 'btn btn-primary navbar-btn navbar-right'
