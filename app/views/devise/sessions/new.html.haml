@@ -5,14 +5,10 @@
         Вход
       .panel-body
         = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f|
-          .field
-            = f.input :login, label: 'Ваш логин или e-mail:', class: 'form-control', autofocus: true
-          .field
-            %br/
-            = f.input :password, label: 'Пароль:', class: 'form-control', autocomplete: "off"
+          = f.input :login, label: 'Ваш логин или e-mail:', class: 'form-control', autofocus: true
+          = f.input :password, label: 'Пароль:', class: 'form-control', autocomplete: "off"
           - if devise_mapping.rememberable?
-            .field
-              = f.input :remember_me, inline_label: 'Запомнить меня', class: 'checkbox', as: :boolean
+            = f.input :remember_me, inline_label: 'Запомнить меня', class: 'checkbox', as: :boolean
           .actions
             = f.button :submit, "Войти", class: 'btn btn-primary'
           = render "devise/shared/links"
