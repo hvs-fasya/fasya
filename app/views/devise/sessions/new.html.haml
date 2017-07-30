@@ -1,15 +1,18 @@
-.panel.panel-primary.col-sm-10.col-sm-offset-1
-  .panel-body
-    = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f|
-      %h2.form-signin-heading Вход
-      .field
-        = f.input :login, label: 'Ваш логин или e-mail:', class: 'form-control', autofocus: true
-      .field
-        %br/
-        = f.input :password, label: 'Пароль:', class: 'form-control', autocomplete: "off"
-      - if devise_mapping.rememberable?
-        .field
-          = f.input :remember_me, inline_label: 'Запомнить меня', class: 'checkbox', as: :boolean
-      .actions
-        = f.button :submit, "Войти", class: 'btn btn-lg btn-primary btn-block'
-      = render "devise/shared/links"
+.row
+  .col-sm-6.col-sm-offset-3
+    .panel.panel-info
+      .panel-heading
+        Вход
+      .panel-body
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-signin'}) do |f|
+          .field
+            = f.input :login, label: 'Ваш логин или e-mail:', class: 'form-control', autofocus: true
+          .field
+            %br/
+            = f.input :password, label: 'Пароль:', class: 'form-control', autocomplete: "off"
+          - if devise_mapping.rememberable?
+            .field
+              = f.input :remember_me, inline_label: 'Запомнить меня', class: 'checkbox', as: :boolean
+          .actions
+            = f.button :submit, "Войти", class: 'btn btn-primary'
+          = render "devise/shared/links"
