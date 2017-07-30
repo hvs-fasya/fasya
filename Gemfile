@@ -17,6 +17,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'haml-rails'
 gem 'noty-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem "font-awesome-rails"
