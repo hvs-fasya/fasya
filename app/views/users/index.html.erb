@@ -1,0 +1,27 @@
+<div class="clearfix">
+  <h1 class="inline">Users List</h1>
+</div>
+<br>
+<p class="lead">
+  hier sind unsere wertvollen Nutzer
+</p>
+<br>
+<table class='table table-striped'>
+  <tr>
+    <th class="table-digits th-5">#</th>
+    <th class="th-5">Edit</th>
+    <th>Nickname</th>
+    <th class="th-20">E-mail</th>
+    <th class="th-10">Locked</th>
+    <th class="th-5">Delete</th>
+  </tr>
+  <tbody>
+  <% @users.each do |user| %>
+  <br>
+    <tr>
+      <td class="table-digits"><%= %></td>
+      <%= render partial: "/users/user_row", locals: {user: user} %>
+    </tr>
+<% end %>
+</tbody>
+</table>

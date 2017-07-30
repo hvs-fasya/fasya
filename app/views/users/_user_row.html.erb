@@ -1,0 +1,9 @@
+<td><%= link_to fa_icon("edit 2x"), "/users/#{user.id}/edit" %></td>
+<td class="table-texts no-wrap"><%= link_to user.nickname, "/users/#{user.id}" %></td>
+<td class="table-texts"><%= user.email %></td>
+<% if user.access_locked? %>
+	<td><%= link_to fa_icon("lock 2x"), "/users/#{user.id}/unlock" %></td>
+<% else %>
+	<td><%= link_to fa_icon("unlock 2x"), "/users/#{user.id}/lock" %></td>
+<% end %>
+<td><%= link_to fa_icon("remove 2x"), "/users/#{user.id}", method: :delete %></td>

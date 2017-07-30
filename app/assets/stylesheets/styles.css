@@ -1,0 +1,34 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+table {
+	width: 100%;
+}
+td {
+	vertical-align: middle !important;
+}
+.table-digits {
+	text-align: right;
+}
+.table-texts {
+	text-align: left;
+}
+.th-5 {
+	width: 5%;
+}
+.th-10 {
+	width: 10%;
+}
+.th-20 {
+	width: 20%;
+}
+.no-wrap {
+	white-space: nowrap;
+}
+.inline {
+	display:inline;
+}

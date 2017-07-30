@@ -1,0 +1,17 @@
+<%= form_for :user, html: {class: "form-horizontal"}, method: form_method do |f| %>
+  <div class="form-group">
+  	<%= f.label :nickname, class: "col-sm-offset-1 col-sm-2 control-label" %>
+  	<div class="col-sm-6">
+  	  <%= f.text_field :nickname, class: "form-control", placeholder: "Пупкин Петр Семенович"  %>
+  	</div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-offset-1 col-sm-2 control-label">Email: </label>
+  	<div class="col-sm-6">
+  	  <%= f.text_field :email, class: "form-control", :placeholder => "example@example.com, example@example.com"  %>
+  	</div>
+  </div>
+  <div class="col-sm-offset-4">
+    <%= f.submit 'Save User Data', :class => "btn btn-primary" %>
+  </div>
+<% end %>
